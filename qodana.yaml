@@ -3,5 +3,11 @@ linter: jetbrains/qodana-js:2024.1-eap
 bootstrap: |+
     npm install --prefix src/Administration/Resources/app/administration
     npm install --prefix src/Storefront/Resources/app/storefront
+    cp src/Administration/Resources/app/administration/package.json . 
+    cp src/Administration/Resources/app/administration/package-lock.json . 
+    npm install
+    cp src/Storefront/Resources/app/storefront/package.json . 
+    cp src/Storefront/Resources/app/storefront/package-lock.json . 
+    npm install
 include:
     - name: CheckDependencyLicenses
